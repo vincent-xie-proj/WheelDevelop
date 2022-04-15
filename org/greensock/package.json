@@ -1,0 +1,12 @@
+{
+	"name": "egret",
+	"version": "3.2.3",
+	"modules": [
+		{
+			"name": "greensock",
+			"description": "greensock",
+			"files": ["TweenMax.min.js","greensock.d.ts"],
+			"root": "src"
+		}
+	]
+}

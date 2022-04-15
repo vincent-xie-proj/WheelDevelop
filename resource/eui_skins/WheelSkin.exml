@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WheelSkin" width="342" height="342" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="1802c81e9b6"></w:Config>
+	<e:Image source="wheel_png" x="0" y="0" locked="true" />
+	<e:Image id="icon0" source="icon_json.icon0" y="171" scaleX="0.8" scaleY="0.8" horizontalCenter="0"
+	         anchorOffsetX="41.25" anchorOffsetY="192.5" locked="true" />
+	<e:Image source="icon_json.icon0" y="171" scaleX="0.8" scaleY="0.8" horizontalCenter="85.5" anchorOffsetX="41.25"
+	         anchorOffsetY="192.5" id="icon1" rotation="44.85" locked="true" />
+	<e:Image source="icon_json.icon0" y="171" scaleX="0.8" scaleY="0.8" horizontalCenter="120.5" anchorOffsetX="41.25"
+	         anchorOffsetY="192.5" id="icon2" rotation="90.94" locked="true" />
+	<e:Image source="icon_json.icon0" y="171" scaleX="0.8" scaleY="0.8" horizontalCenter="84.5" anchorOffsetX="41.25"
+	         anchorOffsetY="192.5" id="icon3" rotation="134.79" locked="true" />
+	<e:Image source="icon_json.icon0" y="171" scaleX="0.8" scaleY="0.8" horizontalCenter="1" anchorOffsetX="41.25"
+	         anchorOffsetY="192.5" id="icon4" rotation="178.45" locked="true" />
+	<e:Image source="icon_json.icon0" y="171" scaleX="0.8" scaleY="0.8" horizontalCenter="-84.5" anchorOffsetX="41.25"
+	         anchorOffsetY="192.5" id="icon5" rotation="222.87" locked="true" />
+	<e:Image source="icon_json.icon0" y="171" scaleX="0.8" scaleY="0.8" horizontalCenter="-123" anchorOffsetX="41.25"
+	         anchorOffsetY="192.5" id="icon6" rotation="268.25" locked="true" />
+	<e:Image source="icon_json.icon0" y="171" scaleX="0.8" scaleY="0.8" horizontalCenter="-86.5" anchorOffsetX="41.25"
+	         anchorOffsetY="192.5" id="icon7" rotation="315.29" locked="true" />
+</e:Skin>
