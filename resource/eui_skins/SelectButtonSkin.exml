@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SelectButtonSkin" width="112" height="116" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="1803bbfacc0"></w:Config>
+	<e:Image id="icon" source="selectButon_json.normal" horizontalCenter="0" verticalCenter="0" />
+</e:Skin>

@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,wheelFrame_png,background_png,wheel_png,icon_json",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,wheelFrame_png,background_png,wheel_png,icon_json,loadingBackground_png,selectFrame_json,button1_png,playButton_json,selectButon_json,loadingMark_png,loadingMarkBackground_png,loadingMarkBackground2_png,loadingMark2_png,messageFrame_png",
 			"name": "preload"
 		}
 	],
@@ -156,6 +156,59 @@
 			"type": "sheet",
 			"url": "assets/Game/icon.json",
 			"subkeys": "icon0,icon1,icon2,icon3,icon4,icon5,icon6,icon7"
+		},
+		{
+			"name": "loadingBackground_png",
+			"type": "image",
+			"url": "assets/Game/loadingBackground.png"
+		},
+		{
+			"name": "selectFrame_json",
+			"type": "sheet",
+			"url": "assets/Game/selectFrame.json",
+			"subkeys": "blue,green,lightgreen,lightyellow,orange,pink,purple,red,yellow"
+		},
+		{
+			"name": "button1_png",
+			"type": "image",
+			"url": "assets/Game/button1.png"
+		},
+		{
+			"name": "playButton_json",
+			"type": "sheet",
+			"url": "assets/Game/playButton.json",
+			"subkeys": "button2,button3"
+		},
+		{
+			"name": "selectButon_json",
+			"type": "sheet",
+			"url": "assets/Game/selectButon.json",
+			"subkeys": "normal,down"
+		},
+		{
+			"name": "loadingMark_png",
+			"type": "image",
+			"url": "assets/Game/loadingMark.png"
+		},
+		{
+			"name": "loadingMarkBackground_png",
+			"type": "image",
+			"url": "assets/Game/loadingMarkBackground.png"
+		},
+		{
+			"name": "loadingMarkBackground2_png",
+			"type": "image",
+			"url": "eui_skins/loadingMarkBackground.png"
+		},
+		{
+			"name": "loadingMark2_png",
+			"type": "image",
+			"url": "eui_skins/loadingMark.png"
+		},
+		{
+			"name": "messageFrame_png",
+			"type": "image",
+			"url": "assets/Game/messageFrame.png"
 		}
 	]
 }

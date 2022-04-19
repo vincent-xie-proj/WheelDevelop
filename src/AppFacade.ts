@@ -9,7 +9,7 @@ class AppFacade extends puremvc.Facade implements puremvc.IFacade {
 
     public initializeController(): void {
         super.initializeController();
-        this.registerCommand(NotificationEvent[NotificationEvent.STARTUP], AppStartupCommand);
+        this.registerCommand(Notification.STARTUP, AppStartupCommand);
     }
 
     public initializeModel(): void {
@@ -25,7 +25,7 @@ class AppFacade extends puremvc.Facade implements puremvc.IFacade {
      * @param	rootView	-	PureMVC应用程序的根视图root，包含其它所有的View Componet
      */
     public startUp(main: egret.DisplayObjectContainer): void {
-        this.sendNotification(NotificationEvent[NotificationEvent.STARTUP], main);
-        this.removeCommand(NotificationEvent[NotificationEvent.STARTUP]); //PureMVC初始化完成，注销STARUP命令
+        this.sendNotification(Notification.STARTUP, main);
+        this.removeCommand(Notification.STARTUP); //PureMVC初始化完成，注销STARUP命令
     }
 }

@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="GameSceneSkin" width="720" height="1080" xmlns:e="http://ns.egret.com/eui"
+<e:Skin class="GameSceneSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui"
         xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<w:Config id="1802c73829d"></w:Config>
-	<e:Image source="background_png" left="0" top="0" right="0" bottom="0" locked="true" />
-	<ns1:Wheel id="Wheel" width="342" height="342" x="358" y="549" anchorOffsetX="171" anchorOffsetY="171" rotation="0"
-	           locked="true" />
-	<e:Group x="155" y="337" locked="true">
-		<e:Rect width="260.03" height="62.41" x="72.05" y="396.3" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="500"
-		        fillAlpha="0.2" rotation="5.22" />
-		<e:Rect width="128.13" height="30.75" x="324" y="411.82" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="500"
-		        fillAlpha="0.2" scaleX="0.7" rotation="10.72" />
-		<e:Image source="wheelFrame_png" x="0" y="0" />
+	<e:Image source="background_png" left="0" top="0" right="0" bottom="0" />
+	<ns1:Wheel id="wheel" width="342" height="342" y="430" anchorOffsetX="171" anchorOffsetY="171" rotation="0" scaleX="1"
+	           scaleY="1" horizontalCenter="0" />
+	<e:Group y="265" scaleX="1" scaleY="1" x="150">
+		<e:Rect width="260.03" height="62.41" x="43.48" y="354.62" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="500"
+		        fillAlpha="0.1" rotation="5.22" locked="true" />
+		<e:Rect width="128.13" height="30.75" x="297.13" y="369.77" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="500"
+		        fillAlpha="0.1" scaleX="0.7" rotation="10.72" locked="true" />
+		<e:Image source="wheelFrame_png" x="-33.4" y="-45.66" locked="true" />
 	</e:Group>
+	<ns1:ControlPanel id="controlPanel" width="400" height="230" horizontalCenter="0" bottom="50" />
+	<e:TextInput id="cheatInput" height="30" bottom="0" left="0" right="0" />
+	<e:Label id="errorMessage" text="error message" left="10" bottom="35" right="10" size="20" fontFamily="Microsoft YaHei"
+	         textColor="0xff1414" />
 </e:Skin>

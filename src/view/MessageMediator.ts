@@ -9,15 +9,15 @@ class MessageMediator extends puremvc.Mediator {
     }
 
     public listNotificationInterests(): string[] {
-        return [
-            NotificationEvent[NotificationEvent.INIT_EVENT],
-        ];
+        const list: string[] = super.listNotificationInterests();
+        list.push(Notification.INIT_EVENT);
+        return list;
     }
 
     public handleNotification(notification: puremvc.INotification): void {
         const name: string = notification.getName();
         switch (name) {
-            case NotificationEvent[NotificationEvent.INIT_EVENT]:
+            case Notification.INIT_EVENT:
                 {
                 }
                 break;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LoadingSceneSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="1803ac3a106"></w:Config>
+	<e:Image source="loadingBackground_png" x="0" y="0" width="640" height="960" locked="true" />
+	<e:Group bottom="20" right="20" scaleX="0.8" scaleY="0.8" locked="true">
+		<e:Rect id="loadingMask" width="310" height="77" x="155" y="77" anchorOffsetX="155" anchorOffsetY="77" scaleY="1"
+		        locked="true" />
+		<e:Image source="loadingMarkBackground_png" x="0" y="0" locked="true" />
+		<e:Image id="loadingView" source="loadingMark_png" x="3" y="3" locked="true" />
+	</e:Group>
+</e:Skin>

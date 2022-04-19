@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ControlPanelSkin" width="400" height="250" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<w:Config id="1803b67d698"></w:Config>
+	<e:Group x="24" y="0">
+		<e:Image source="selectFrame_json.red" x="102" y="0" locked="true" />
+		<e:Image id="iconMask" source="selectFrame_json.red" x="102" y="0" locked="true" />
+		<ns1:SelectIcon id="selectIcon" width="350" height="64" x="0" y="42" />
+	</e:Group>
+	<ns1:SelectButton id="nextButton" width="112" height="116" x="288" y="16" />
+	<ns1:SelectButton id="prevButton" width="112" height="116" x="112" y="16" scaleX="-1" />
+	<ns1:PlayButton id="playButton" width="171" height="71" horizontalCenter="0" bottom="0" locked="true" />
+</e:Skin>
