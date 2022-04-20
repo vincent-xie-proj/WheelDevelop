@@ -35,6 +35,7 @@ var game_file_list = [
 	"bin-debug/View/Component/ControlPanel.js",
 	"bin-debug/View/Component/CustomButton.js",
 	"bin-debug/View/Component/GameScene.js",
+	"bin-debug/View/Component/GameSound.js",
 	"bin-debug/View/Component/LoadingScene.js",
 	"bin-debug/View/Component/MessageAlert.js",
 	"bin-debug/View/Component/MessageCloseButton.js",

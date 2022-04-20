@@ -22,6 +22,8 @@ class GameMediator extends puremvc.Mediator {
     public listNotificationInterests(): string[] {
         const list: string[] = super.listNotificationInterests();
         list.push(Notification.INIT_EVENT);
+        list.push(Notification.LOADING_EVENT);
+        list.push(Notification.GAME_START_EVENT);
         list.push(Notification.GAME_RESULT_EVENT);
         list.push(Notification.UPDATE_CREDIT_EVENT);
         return list;
@@ -35,6 +37,19 @@ class GameMediator extends puremvc.Mediator {
             case Notification.INIT_EVENT:
                 {
                     stage.addChild(this.gameScene);
+                }
+                break;
+            case Notification.LOADING_EVENT:
+                {
+                    const [isShow, percent] = body as any[];
+                    if (isShow) {
+                        this.gameScene.onHide();
+                    }
+                }
+                break;
+            case Notification.GAME_START_EVENT:
+                {
+                    this.gameScene.onShow();
                 }
                 break;
             case Notification.GAME_RESULT_EVENT:

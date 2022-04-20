@@ -4,7 +4,7 @@
 	<w:Config id="1802c73829d"></w:Config>
 	<e:Image source="background_png" left="0" top="0" right="0" bottom="0" locked="true" />
 	<ns1:Wheel id="wheel" width="342" height="342" y="413" anchorOffsetX="171" anchorOffsetY="171" rotation="0"
-	           scaleX="1.15" scaleY="1.15" horizontalCenter="2.5" />
+	           scaleX="1.15" scaleY="1.15" horizontalCenter="2.5" locked="true" />
 	<e:Group y="230" scaleX="1.1" scaleY="1.1" x="136" locked="true">
 		<e:Rect width="260.03" height="62.41" x="43.48" y="354.62" anchorOffsetX="0" anchorOffsetY="0" ellipseWidth="500"
 		        fillAlpha="0.1" rotation="5.22" locked="true" />
@@ -16,7 +16,7 @@
 	<e:TextInput id="cheatInput" height="30" bottom="0" left="0" right="0" locked="true" />
 	<e:Label id="errorMessage" text="error message" left="10" bottom="35" right="10" size="20" fontFamily="Microsoft YaHei"
 	         textColor="0xff1414" locked="true" />
-	<e:Group scaleX="1.1" scaleY="1.1" horizontalCenter="0" top="0">
+	<e:Group scaleX="1.1" scaleY="1.1" horizontalCenter="0" top="0" locked="true">
 		<e:Image source="infoFrame_png" scaleX="1" scaleY="1" x="0" y="0" />
 		<e:Label id="credit" text="12345678" x="131" y="45" fontFamily="Georgia" textAlign="right" size="42" width="205"
 		         textColor="0x56371a" anchorOffsetX="0" bold="true" />

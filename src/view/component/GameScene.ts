@@ -21,6 +21,9 @@ class GameScene extends eui.Component implements eui.UIComponent {
 	/**得獎動畫遮色片 */
 	private winMask: eui.Image;
 
+	/**遊戲背景音樂 */
+	private backgroundSound: GameSound;
+
 	/**得獎動畫時間 */
 	private static WIN_DURATION: number = 0.3;
 	public constructor() {
@@ -38,6 +41,7 @@ class GameScene extends eui.Component implements eui.UIComponent {
 		this.cheatInput.prompt = `操控轉輪:請輸入 i=數字，ex: i=1，增加點數:請輸入 $數字，ex:$100，輸入完成後請按下Enter發送指令`;
 		this.cheatInput.addEventListener(eui.UIEvent.CHANGE, this.onInputCommand, this);
 		this.winAnimation.mask = this.winMask;
+		this.backgroundSound = new GameSound(egret.Sound.MUSIC, "resource/assets/Sound/background.mp3");
 		this.init();
 	}
 
@@ -45,6 +49,18 @@ class GameScene extends eui.Component implements eui.UIComponent {
 	public init(): void {
 		this.closeCheat();
 		this.closeWin();
+	}
+
+	/**顯示場景 */
+	public onShow(): void {
+		this.backgroundSound.onPlay();
+		this.visible = true;
+	}
+
+	/**隱藏場景 */
+	public onHide(): void {
+		this.backgroundSound.onStop();
+		this.visible = false;
 	}
 
 	/**下注 */

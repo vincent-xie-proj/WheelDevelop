@@ -12,6 +12,7 @@ class Wheel extends eui.Component implements eui.UIComponent {
 	/**捕間角度 */
 	private tweenRotation: number = 0;
 
+
 	/**等分角 */
 	private static EQUAL_PART_ANGLE: number = 360 / GameConst.COUNT_OF_ICON;
 
