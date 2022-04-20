@@ -1,3 +1,4 @@
+/**載入場景組件 */
 class LoadingScene extends eui.Component implements eui.UIComponent {
 	/**下載 UI 群組 */
 	private loadingGroup: eui.Group;

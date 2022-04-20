@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MessageAlertSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<w:Config id="180408e47bd"></w:Config>
+	<e:Rect left="0" top="0" bottom="0" right="0" fillAlpha="0.75" locked="true" />
+	<e:Group id="uiGroup" verticalCenter="0" anchorOffsetX="246.5" anchorOffsetY="152" x="343">
+		<e:Image source="messageFrame_png" y="0" scaleX="0.7" scaleY="0.7" x="0" locked="true" />
+		<e:Label id="messageText" text="這是訊息" x="96" y="70" textColor="0x3b4717" anchorOffsetX="0" width="262.67"
+		         anchorOffsetY="0" height="141" fontFamily="Microsoft YaHei" bold="true" locked="true" />
+		<ns1:MessageConfirmButton id="confirmButton" width="203" height="92" x="135.99" y="222" scaleX="0.85" scaleY="0.85"
+		                          locked="true" />
+		<ns1:MessageCloseButton id="closeButton" width="102" height="102" x="388.67" y="0.83" scaleX="0.75" scaleY="0.75"
+		                        locked="true" />
+	</e:Group>
+</e:Skin>

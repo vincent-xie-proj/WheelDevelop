@@ -19,7 +19,11 @@
     "ControlPanel": "resource/eui_skins/ControlPanelSkin.exml",
     "SelectIcon": "resource/eui_skins/SelectIconSkin.exml",
     "PlayButton": "resource/eui_skins/PlayButtonSkin.exml",
-    "SelectButton": "resource/eui_skins/SelectButtonSkin.exml"
+    "SelectButton": "resource/eui_skins/SelectButtonSkin.exml",
+    "MessageAlert": "resource/eui_skins/MessageAlertSkin.exml",
+    "MessageConfirmButton": "resource/eui_skins/MessageConfirmButtonSkin.exml",
+    "MessageCloseButton": "resource/eui_skins/MessageCloseButtonSkin.exml",
+    "WinAnimation": "resource/eui_skins/WinAnimationSkin.exml"
   },
   "autoGenerateExmlsList": true,
   "exmls": [
@@ -31,6 +35,9 @@
     "resource/eui_skins/HSliderSkin.exml",
     "resource/eui_skins/ItemRendererSkin.exml",
     "resource/eui_skins/LoadingSceneSkin.exml",
+    "resource/eui_skins/MessageAlertSkin.exml",
+    "resource/eui_skins/MessageCloseButtonSkin.exml",
+    "resource/eui_skins/MessageConfirmButtonSkin.exml",
     "resource/eui_skins/PanelSkin.exml",
     "resource/eui_skins/PlayButtonSkin.exml",
     "resource/eui_skins/ProgressBarSkin.exml",
@@ -42,6 +49,7 @@
     "resource/eui_skins/ToggleSwitchSkin.exml",
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
-    "resource/eui_skins/WheelSkin.exml"
+    "resource/eui_skins/WheelSkin.exml",
+    "resource/eui_skins/WinAnimationSkin.exml"
   ]
 }

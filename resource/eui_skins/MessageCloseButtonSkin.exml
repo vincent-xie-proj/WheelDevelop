@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MessageCloseButtonSkin" width="102" height="102" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="18040d3c448"></w:Config>
+	<e:Image id="icon" source="closeButton_json.normal" horizontalCenter="0" verticalCenter="0" />
+</e:Skin>

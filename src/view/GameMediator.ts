@@ -8,7 +8,8 @@ class GameMediator extends puremvc.Mediator {
     public constructor(mediatorName?: string, viewComponent?: Main) {
         super(mediatorName, viewComponent);
 
-        this.gameScene.addEventListener(GameEvent.PLAY, this.onPlay, this);
+        this.gameScene.addEventListener(GameEvent.SPIN, this.onSpin, this);
+        this.gameScene.addEventListener(GameEvent.FINISH_RUN, this.showResult, this);
         this.gameScene.addEventListener(GameEvent.CHEAT, this.onCheat, this);
         document.addEventListener("keyup", this.onKeyUp.bind(this));
     }
@@ -53,8 +54,15 @@ class GameMediator extends puremvc.Mediator {
     }
 
     /**下注 */
-    private onPlay(e: egret.Event): void {
+    private onSpin(e: egret.Event): void {
         this.sendNotification(Notification.GAME_SPIN_EVENT, e.data);
+    }
+
+    /**顯示下注結果 */
+    private showResult(e: egret.Event): void {
+        this.gameScene.showResult(this.resultTemp.isWin, this.resultTemp.winLose);
+        this.gameScene.updateCredit(this.resultTemp.credit);
+        this.resultTemp = null;
     }
 
     /**下注 */

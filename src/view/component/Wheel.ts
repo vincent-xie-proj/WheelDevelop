@@ -1,3 +1,4 @@
+/**轉輪 */
 class Wheel extends eui.Component implements eui.UIComponent {
 	/**圖示表 */
 	private icons: eui.Image[] = [];
@@ -121,7 +122,11 @@ class Wheel extends eui.Component implements eui.UIComponent {
 		endTimeLine.add(endTweenLite);
 
 		// 播放時間軸
-		const timeLine: TimelineLite = new TimelineLite();
+		const timeLine: TimelineLite = new TimelineLite({
+			onComplete: () => {
+				this.dispatchEvent(new egret.Event(GameEvent.FINISH_RUN));
+			}
+		});
 		timeLine.add(startTimeLine);
 		timeLine.add(runTimeLine);
 		timeLine.add(endTimeLine);

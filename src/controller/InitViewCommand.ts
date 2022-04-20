@@ -4,5 +4,6 @@ class InitViewCommand extends puremvc.SimpleCommand {
         const main: Main = notification.getBody() as Main;
         this.facade.registerMediator(new GameMediator(MediatorConst.GAME, main));
         this.facade.registerMediator(new LoadingMediator(MediatorConst.LOADING, main));
+        this.facade.registerMediator(new MessageMediator(MediatorConst.MESSAGE, main));
     }
 }

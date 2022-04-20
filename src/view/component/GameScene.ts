@@ -1,3 +1,4 @@
+/**遊戲場景組件 */
 class GameScene extends eui.Component implements eui.UIComponent {
 	/**轉輪 */
 	private wheel: Wheel;
@@ -5,11 +6,23 @@ class GameScene extends eui.Component implements eui.UIComponent {
 	/**控制面板 */
 	private controlPanel: ControlPanel;
 
+	/**點數 */
+	private credit: eui.Label;
+
 	/**作弊輸入框 */
 	private cheatInput: eui.TextInput;
 
 	/**作弊錯誤訊息 */
 	private errorMessage: eui.Label;
+
+	/**得獎動畫 */
+	private winAnimation: WinAnimation;
+
+	/**得獎動畫遮色片 */
+	private winMask: eui.Image;
+
+	/**得獎動畫時間 */
+	private static WIN_DURATION: number = 0.3;
 	public constructor() {
 		super();
 		this.once(eui.UIEvent.COMPLETE, this.uiComplete, this);
@@ -20,19 +33,68 @@ class GameScene extends eui.Component implements eui.UIComponent {
 	private uiComplete(e: eui.UIEvent): void {
 		// 物件必須等到uiComplete才能使用
 		document.addEventListener("keyup", this.onKeyUp.bind(this));
+		this.controlPanel.addEventListener(GameEvent.SPIN, this.onSpin, this);
+		this.wheel.addEventListener(GameEvent.FINISH_RUN, this.onFinishRun, this);
 		this.cheatInput.prompt = `操控轉輪:請輸入 i=數字，ex: i=1，增加點數:請輸入 $數字，ex:$100，輸入完成後請按下Enter發送指令`;
 		this.cheatInput.addEventListener(eui.UIEvent.CHANGE, this.onInputCommand, this);
+		this.winAnimation.mask = this.winMask;
+		this.init();
+	}
+
+	/**初始化 */
+	public init(): void {
 		this.closeCheat();
+		this.closeWin();
+	}
+
+	/**下注 */
+	private onSpin(e: egret.Event): void {
+		this.dispatchEvent(new egret.Event(GameEvent.SPIN, false, false, e.data));
 	}
 
 	/**轉動 */
 	public run(appointIcon: number): void {
+		this.controlPanel.switchDisabled(true);
 		this.wheel.run(appointIcon);
+		this.closeWin();
+	}
+
+	/**完成轉動 */
+	private onFinishRun(e: egret.Event): void {
+		this.dispatchEvent(new egret.Event(GameEvent.FINISH_RUN));
+		this.controlPanel.switchDisabled(false);
 	}
 
 	/**更新點數 */
 	public updateCredit(credit: number): void {
-		// this.credit.text = credit.toLocaleString();
+		this.credit.text = credit.toLocaleString();
+	}
+
+	/**顯示下注結果 */
+	public showResult(isWin: boolean, bonus: number): void {
+		if (isWin) {
+			this.winAnimation.updateCredit(bonus);
+			this.showWin();
+		}
+	}
+
+	/**顯示中獎畫面 */
+	private showWin(): void {
+		// 清除動畫
+		TweenLite.killTweensOf(this);
+
+		TweenLite.fromTo(this.winMask, GameScene.WIN_DURATION, { x: -800 }, {
+			x: 0, ease: Linear.easeNone, onStart: () => {
+				this.winAnimation.visible = true;
+			}
+		})
+	}
+
+	/**關閉中獎畫面 */
+	private closeWin(): void {
+		// 清除動畫
+		TweenLite.killTweensOf(this);
+		this.winAnimation.visible = false;
 	}
 
 	/**作弊開關 */

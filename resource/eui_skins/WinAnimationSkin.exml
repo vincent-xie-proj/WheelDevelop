@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="WinAnimationSkin" width="640" height="400" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="18044e6089a"></w:Config>
+	<e:Rect left="0" top="0" bottom="0" right="0" fillAlpha="0.75" locked="true" />
+	<e:Image source="winFrame_png" horizontalCenter="0" verticalCenter="0" scaleX="0.7" scaleY="0.7" locked="true" />
+	<e:Label id="credit" text="12345678" y="285" bold="true" fontFamily="Georgia" textColor="0x825c1f"
+	         verticalAlign="middle" anchorOffsetX="0" width="150" textAlign="center" horizontalCenter="0" locked="true" />
+</e:Skin>

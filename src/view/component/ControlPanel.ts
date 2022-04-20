@@ -1,4 +1,7 @@
+/**控制面板組件 */
 class ControlPanel extends eui.Component implements eui.UIComponent {
+	/**是否禁能 */
+	private isDisabled: boolean;
 
 	/**選擇圖示 */
 	private selectIcon: SelectIcon;
@@ -26,22 +29,35 @@ class ControlPanel extends eui.Component implements eui.UIComponent {
 		// 物件必須等到uiComplete才能使用
 		this.prevButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onPrev, this);
 		this.nextButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onNext, this);
-		this.playButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onPlay, this);
+		this.playButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSpin, this);
 		this.selectIcon.mask = this.iconMask;
 	}
 
 	/**選擇上一張 */
 	private onPrev(e: egret.TouchEvent): void {
+		if (this.isDisabled) return;
+
 		this.selectIcon.prev();
 	}
 
 	/**選擇下一張 */
 	private onNext(e: egret.TouchEvent): void {
+		if (this.isDisabled) return;
+
 		this.selectIcon.next();
 	}
 
 	/**下注 */
-	private onPlay(e: egret.TouchEvent): void {
-		this.dispatchEvent(new egret.Event(GameEvent.PLAY, true, false, this.selectIcon.getShowIcon()));
+	private onSpin(e: egret.TouchEvent): void {
+		if (this.isDisabled) return;
+
+		this.dispatchEvent(new egret.Event(GameEvent.SPIN, false, false, this.selectIcon.getShowIcon()));
+	}
+
+	/**禁能開關 */
+	public switchDisabled(isDisabled: boolean): void {
+		this.prevButton.enabled = !isDisabled;
+		this.nextButton.enabled = !isDisabled;
+		this.playButton.enabled = !isDisabled;
 	}
 }

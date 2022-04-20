@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MessageConfirmButtonSkin" width="203" height="92" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="18040bb1a5f"></w:Config>
+	<e:Image id="icon" source="confirmButton_json.normal" height="92" width="203" verticalCenter="0" horizontalCenter="0" />
+</e:Skin>
