@@ -16,7 +16,7 @@ class Wheel extends eui.Component implements eui.UIComponent {
 	private static EQUAL_PART_ANGLE: number = 360 / GameConst.COUNT_OF_ICON;
 
 	/**角度偏移量 */
-	private static OFFSET_ANGLE: number = Wheel.EQUAL_PART_ANGLE - 5;
+	private static OFFSET_ANGLE: number = Wheel.EQUAL_PART_ANGLE * 0.45;
 
 	/**轉動緩衝時間 */
 	private static BUFFER_DURATION: number = 1.5;

@@ -69,10 +69,10 @@ class SelectIcon extends eui.Component implements eui.UIComponent {
 		// 清除動畫
 		TweenLite.killTweensOf(this);
 		this.isTween = true;
-		const endX: number = isNext ? -141 : 141;
-		TweenLite.fromTo(this, SelectIcon.SELECT_DURATION, { x: 0 }, {
+		const endX: number = isNext ? -83 : 273;
+		TweenLite.fromTo(this, SelectIcon.SELECT_DURATION, { x: 95 }, {
 			x: endX, ease: Linear.easeNone, onComplete: () => {
-				this.x = 0;
+				this.x = 95;
 				this.putIcon(isNext ? this.checkIndex(++this.showIcon) : this.checkIndex(--this.showIcon));
 				this.isTween = false;
 			}
