@@ -10,7 +10,7 @@ class SelectIcon extends eui.Component implements eui.UIComponent {
 	private isTween: boolean = false;
 
 	/**選擇動畫秒數 */
-	private static SELECT_DURATION: number = 0.2;
+	private static SELECT_DURATION: number = 0.1;
 	public constructor() {
 		super();
 		this.once(eui.UIEvent.COMPLETE, this.uiComplete, this);

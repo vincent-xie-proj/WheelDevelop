@@ -19,6 +19,12 @@ class ControlPanel extends eui.Component implements eui.UIComponent {
 	/**圖示遮色片 */
 	private iconMask: eui.Image;
 
+	/**下注音效 */
+	private spinSound: GameSound;
+
+	/**選擇音效 */
+	private selectSound: GameSound;
+
 	public constructor() {
 		super();
 		this.once(eui.UIEvent.COMPLETE, this.uiComplete, this);
@@ -31,12 +37,15 @@ class ControlPanel extends eui.Component implements eui.UIComponent {
 		this.nextButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onNext, this);
 		this.playButton.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onSpin, this);
 		this.selectIcon.mask = this.iconMask;
+		this.spinSound = new GameSound(egret.Sound.EFFECT, "resource/assets/Sound/spin.mp3");
+		this.selectSound = new GameSound(egret.Sound.EFFECT, "resource/assets/Sound/select.mp3");
 	}
 
 	/**選擇上一張 */
 	private onPrev(e: egret.TouchEvent): void {
 		if (this.isDisabled) return;
 
+		this.selectSound.onPlay(0, 1, false);
 		this.selectIcon.prev();
 	}
 
@@ -44,6 +53,7 @@ class ControlPanel extends eui.Component implements eui.UIComponent {
 	private onNext(e: egret.TouchEvent): void {
 		if (this.isDisabled) return;
 
+		this.selectSound.onPlay(0, 1, false);
 		this.selectIcon.next();
 	}
 
@@ -51,6 +61,7 @@ class ControlPanel extends eui.Component implements eui.UIComponent {
 	private onSpin(e: egret.TouchEvent): void {
 		if (this.isDisabled) return;
 
+		this.spinSound.onPlay(0, 1, false);
 		this.dispatchEvent(new egret.Event(GameEvent.SPIN, false, false, this.selectIcon.getShowIcon()));
 	}
 
