@@ -24,6 +24,9 @@ class GameScene extends eui.Component implements eui.UIComponent {
 	/**遊戲背景音樂 */
 	private backgroundSound: GameSound;
 
+	/**遊戲中獎音樂 */
+	private winSound: GameSound;
+
 	/**得獎動畫時間 */
 	private static WIN_DURATION: number = 0.3;
 	public constructor() {
@@ -42,6 +45,7 @@ class GameScene extends eui.Component implements eui.UIComponent {
 		this.cheatInput.addEventListener(eui.UIEvent.CHANGE, this.onInputCommand, this);
 		this.winAnimation.mask = this.winMask;
 		this.backgroundSound = new GameSound(egret.Sound.MUSIC, "resource/assets/Sound/background.mp3");
+		this.winSound = new GameSound(egret.Sound.EFFECT, "resource/assets/Sound/win.wav");
 		this.init();
 	}
 
@@ -104,6 +108,8 @@ class GameScene extends eui.Component implements eui.UIComponent {
 				this.winAnimation.visible = true;
 			}
 		})
+
+		this.winSound.onPlay(0, 1, false);
 	}
 
 	/**關閉中獎畫面 */
